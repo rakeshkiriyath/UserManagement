@@ -1,6 +1,6 @@
 package com.in28minutes.learnspringframework.game;
 
-public class SuperMarioGame {
+public class SuperMarioGame implements GamingConsole {
 	
 	public void up() {
 		System.out.println("Up 2x");

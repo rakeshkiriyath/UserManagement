@@ -1,31 +1,36 @@
 package com.in28minutes.learnspringframework.game;
 
 public class GameRunner {
-
-	private MarioGame game;
+	/*
+	 * We don't required these, as we have an interface. We can define GammingConsole interface and create 
+	 * object of its implementation class: Mario and SuperMario
+	 * 
+	 * private GamingConsole game; 
+	 * 
+	 * private SuperMarioGame superGame;
+	 
 	
-	private SuperMarioGame superGame;
-	
-	public GameRunner(MarioGame game) {
+	public GameRunner(GamingConsole game) {
 		this.game = game;
 	}
 
 	public GameRunner(SuperMarioGame superGame) {
 		this.superGame = superGame;
 	}
+	*/
+	
+	private GamingConsole gamingConsole;
+	
+	public GameRunner(GamingConsole gamingConsole) {
+		this.gamingConsole = gamingConsole;
+	}
 
 	public void runGame() {
-		this.game.up();
-		this.game.down();
-		this.game.right();
-		this.game.left();
+		this.gamingConsole.up();
+		this.gamingConsole.down();
+		this.gamingConsole.right();
+		this.gamingConsole.left();
 	}
 
-	public void runSuperGame() {
-		this.superGame.up();
-		this.superGame.down();
-		this.superGame.right();
-		this.superGame.left();
-	}
 
 }
